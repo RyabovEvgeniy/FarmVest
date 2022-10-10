@@ -29,7 +29,7 @@ $minWidth: 320;
 // Ширина полотна (макета)
 $maxWidth: 1920;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
-$maxWidthContainer: 1170;
+$maxWidthContainer: 1620;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 30;
@@ -87,7 +87,7 @@ body {
 */
 @if ($responsiveType==1) {
 	// Отзывчивая
-	[class*="__container"] {
+	[class*="__container-big"] {
 		@if ($maxWidthContainer>0) {
 			max-width: rem($maxWidthContainer);
 			box-sizing: content-box;
@@ -122,6 +122,12 @@ body {
 			}
 		}
 	}
+}
+
+[class*="__container"] {
+	max-width: rem(1420);
+	margin: 0 auto;
+	box-sizing: content-box;
 }
 
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов
